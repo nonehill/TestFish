@@ -1,0 +1,40 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+#import "BaseView.h"
+#import "UIFont+Dosis.h"
+#import "UIButton+Image.h"
+#import "BaseTableViewCell.h"
+#import "BaseTableViewInfo.h"
+#import "StepOneView.h"
+#import "Description.h"
+#import "InfoItemView.h"
+#import "RigsMenuVC.h"
+#import <UIKit/UIKit.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+NSString* currentItem;
+BOOL lastStep;
+
+
+#ifdef __OBJC__
+
+#define IPAD        UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+#define iPhone_4    [[UIScreen mainScreen] bounds].size.height == 480
+
+#define DLog(...) NSLog(@"%s %@", __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "UIImage+Resizing.h"
+
+#endif
+
